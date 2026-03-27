@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms & Conditions - FlowBalance</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .tab-container {
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+            flex-wrap: wrap;
+        }
+
+        .tab-button {
+            background: none;
+            border: none;
+            font-size: 16px;
+            padding: 10px 20px;
+            cursor: pointer;
+            color: #666;
+            font-weight: bold;
+            border-radius: 5px 5px 0 0;
+            transition: 0.3s;
+        }
+
+        .tab-button:hover {
+            background-color: #f8f9fa;
+            color: #007bff;
+        }
+
+        .tab-button.active {
+            color: #007bff;
+            border-bottom: 3px solid #007bff;
+        }
+
+        .tab-content {
+            display: none;
+            animation: fadeEffect 0.5s;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        @keyframes fadeEffect {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        h1 {
+            color: #111;
+            margin-top: 20px;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+        }
+
+        h2 {
+            color: #222;
+            margin-top: 35px;
+            border-left: 4px solid #007bff;
+            padding-left: 10px;
+        }
+
+        .warning-box {
+            background-color: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 0 5px 5px 0;
+            color: #856404;
+        }
+
+        .footer {
+            margin-top: 50px;
+            font-size: 0.9em;
+            color: #666;
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="tab-container">
+        <button class="tab-button active" onclick="openTab(event, 'English')">🇺🇸 English</button>
+        <button class="tab-button" onclick="openTab(event, 'Espanol')">🇪🇸 Español</button>
+        <button class="tab-button" onclick="openTab(event, 'Portugues')">🇧🇷 Português</button>
+    </div>
+
+    <div id="English" class="tab-content active">
+        <h1>Terms and Conditions of Use</h1>
+        <p><strong>Last Updated:</strong> March 27, 2026</p>
+
+        <p>Welcome to FlowBalance. These Terms and Conditions govern your use of our personal financial management
+            application. By downloading or using the App, you agree to be bound by this document. If you do not agree,
+            please do not use it.</p>
+
+        <h2>1. Purpose of the Service</h2>
+        <p>FlowBalance is a personal finance management tool that allows users to manually record their income,
+            expenses, and view balances through charts. The App functions exclusively as a recording and organizational
+            tool; it is not a financial institution, a bank, or a payment platform.</p>
+
+        <h2>2. Freemium Business Model</h2>
+        <p>The App operates under a Freemium model:</p>
+        <ul>
+            <li><strong>Free Version:</strong> Allows the user to use the app with certain limitations, such as a
+                restricted number of transactions (income/expenses), categories, and subcategories, no access to the
+                security PIN, limitation to a single local currency, as well as restrictions on other current or future
+                features.</li>
+            <li><strong>Premium Version (Lifetime Access):</strong> Users can unlock certain features and remove
+                restrictions through a <strong>one-time payment</strong>. This is not a recurring subscription. The
+                transaction is securely processed by the Google Play Store and managed by RevenueCat. Refunds are
+                subject to Google Play's standard refund policies.</li>
+        </ul>
+
+        <h2>3. Data Privacy and Management (Local Approach)</h2>
+        <p>Given the technical nature of the App, data management is strictly local. All financial data entered is
+            stored exclusively in the memory of the user's device. FlowBalance does not have access to, collect, or
+            store your financial data on external servers.</p>
+        <ul>
+            <li><strong>Backups and Export:</strong> The user is solely responsible for backing up their data using the
+                manual JSON export feature.</li>
+            <li><strong>Data Deletion:</strong> Upon uninstalling the App or clearing its cache data, all financial
+                information will be irreversibly deleted unless the user has manually saved an external backup.</li>
+        </ul>
+
+        <h2>4. Security and Access PIN</h2>
+        <p>The App offers an optional 4-digit security PIN feature. The user is solely responsible for remembering and
+            safeguarding this code.</p>
+        <div class="warning-box">
+            <strong>Warning:</strong> Since there are no user accounts linked to an email, there is no PIN recovery
+            process. If the user forgets their PIN, they may lose access to their local data with no possibility of
+            recovery by the developer.
+        </div>
+
+        <h2>5. Disclaimer (No Financial Advice)</h2>
+        <p>The App provides calculations, charts, and balances based solely on the information manually entered by the
+            user. The content generated by the App does not constitute professional financial, legal, accounting, or tax
+            advice. The user is solely responsible for the financial decisions they make. Undefined Flow Lab is not
+            liable for financial losses, failed investments, or cash flow errors arising from the use of the tool.</p>
+
+        <h2>6. Intellectual Property</h2>
+        <p>All source code, designs, logos, graphics, and texts of the App are the exclusive property of Undefined Flow
+            Lab. Reverse engineering, decompilation, or unauthorized distribution is strictly prohibited.</p>
+
+        <h2>7. Limitation of Liability</h2>
+        <p>To the maximum extent permitted by law, the developer shall not be liable for data loss due to device
+            failure, theft, or lack of backups; technical errors or service interruptions; or the use of the exported
+            JSON file outside the application.</p>
+
+        <h2>8. Applicable Law and Jurisdiction</h2>
+        <p>These terms are governed by the laws of the Republic of Colombia. Any dispute will be submitted to the
+            competent courts in Colombia, without prejudice to the mandatory consumer protection rights that apply
+            locally in the user's country of residence.</p>
+    </div>
+
+    <div id="Espanol" class="tab-content">
+        <h1>Términos y Condiciones de Uso</h1>
+        <p><strong>Última actualización:</strong> 27 de marzo de 2026</p>
+
+        <p>Bienvenido a FlowBalance. Estos Términos y Condiciones rigen el uso de nuestra aplicación de gestión
+            financiera personal. Al descargar o utilizar la App, aceptas quedar vinculado por este documento. Si no
+            estás de acuerdo, por favor, abstente de utilizarla.</p>
+
+        <h2>1. Objeto del Servicio</h2>
+        <p>FlowBalance es una herramienta de gestión de finanzas personales que permite al usuario registrar de forma
+            manual sus ingresos, gastos y visualizar balances mediante gráficos. La App funciona exclusivamente como una
+            herramienta de registro y organización; no es una entidad financiera, ni un banco, ni una plataforma de
+            pagos.</p>
+
+        <h2>2. Modelo de Negocio (Freemium)</h2>
+        <p>La App opera bajo una modalidad Freemium:</p>
+        <ul>
+            <li><strong>Versión Gratuita:</strong> Permite al usuario utilizar la app con ciertas limitaciones, tales
+                como un número restringido de registros de movimientos (ingresos/gastos), categorías y subcategorías, la
+                restricción de uso del PIN de seguridad, limitación a una única moneda local, así como restricciones en
+                otras funcionalidades actuales o futuras.</li>
+            <li><strong>Versión Premium (Acceso Vitalicio/Lifetime):</strong> El usuario puede desbloquear ciertas
+                capacidades y eliminar las restricciones mediante un <strong>pago único de por vida</strong>. No es una
+                suscripción recurrente. La transacción es procesada de forma segura por Google Play Store y gestionada
+                mediante RevenueCat. Los reembolsos están sujetos a las políticas estándar de Google Play.</li>
+        </ul>
+
+        <h2>3. Privacidad y Manejo de Datos (Enfoque Local)</h2>
+        <p>Dada la naturaleza técnica de la App, el manejo de datos es estrictamente local. Todos los datos financieros
+            ingresados se almacenan exclusivamente en la memoria del dispositivo del usuario. FlowBalance no tiene
+            acceso, no recolecta, ni almacena tus datos financieros en servidores externos.</p>
+        <ul>
+            <li><strong>Backups y Exportación:</strong> El usuario es el único responsable de realizar copias de
+                seguridad mediante la función de exportación manual de archivos JSON.</li>
+            <li><strong>Eliminación de datos:</strong> Al desinstalar la App o borrar sus datos de caché, toda la
+                información financiera se eliminará de forma irreversible, a menos que el usuario cuente con un respaldo
+                externo guardado manualmente.</li>
+        </ul>
+
+        <h2>4. Seguridad y PIN de Acceso</h2>
+        <p>La App ofrece una función opcional de PIN de seguridad de 4 dígitos. El usuario es el único responsable de
+            recordar y resguardar dicho código.</p>
+        <div class="warning-box">
+            <strong>Advertencia:</strong> Al no existir cuentas vinculadas a un correo electrónico, no existe un proceso
+            de recuperación de PIN. Si el usuario olvida su PIN, podría perder el acceso a sus datos locales sin
+            posibilidad de recuperación por parte del desarrollador.
+        </div>
+
+        <h2>5. Exención de Responsabilidad (No Asesoría Financiera)</h2>
+        <p>La App proporciona cálculos, gráficos y balances basados únicamente en la información ingresada por el
+            usuario. El contenido generado por la App no constituye asesoría financiera, legal, contable o fiscal
+            profesional. El usuario es el único responsable de las decisiones financieras que tome. Undefined Flow Lab
+            no se hace responsable por pérdidas económicas, inversiones fallidas o errores en el flujo de caja del
+            usuario derivados del uso de la herramienta.</p>
+
+        <h2>6. Propiedad Intelectual</h2>
+        <p>Todo el código fuente, diseños, logotipos, gráficos y textos de la App son propiedad exclusiva de Undefined
+            Flow Lab. Queda prohibida la ingeniería inversa, descompilación o distribución no autorizada de la misma.
+        </p>
+
+        <h2>7. Limitación de Responsabilidad</h2>
+        <p>En la medida máxima permitida por la ley, el desarrollador no será responsable por la pérdida de datos debido
+            a fallos en el dispositivo, robo del mismo o falta de copias de seguridad; errores técnicos o interrupciones
+            en el servicio; o el uso del archivo JSON exportado por fuera de la aplicación.</p>
+
+        <h2>8. Ley Aplicable y Jurisdicción</h2>
+        <p>Estos términos se rigen por las leyes de la República de Colombia. Cualquier disputa relacionada con estos
+            términos será sometida a los tribunales competentes en Colombia, sin perjuicio de los derechos imperativos
+            de protección al consumidor que apliquen localmente en el país de residencia del usuario.</p>
+    </div>
+
+    <div id="Portugues" class="tab-content">
+        <h1>Termos e Condições de Uso</h1>
+        <p><strong>Última atualização:</strong> 27 de março de 2026</p>
+
+        <p>Bem-vindo ao FlowBalance. Estes Termos e Condições regem o uso do nosso aplicativo de gestão financeira
+            pessoal. Ao baixar ou usar o App, você concorda em ficar vinculado a este documento. Se você não concorda,
+            por favor, não o utilize.</p>
+
+        <h2>1. Objeto do Serviço</h2>
+        <p>O FlowBalance é uma ferramenta de gestão de finanças pessoais que permite ao usuário registrar manualmente
+            suas receitas, despesas e visualizar saldos por meio de gráficos. O App funciona exclusivamente como uma
+            ferramenta de registro e organização; não é uma instituição financeira, um banco ou uma plataforma de
+            pagamentos.</p>
+
+        <h2>2. Modelo de Negócios (Freemium)</h2>
+        <p>O App opera sob uma modalidade Freemium:</p>
+        <ul>
+            <li><strong>Versão Gratuita:</strong> Permite ao usuário usar o aplicativo com certas limitações, como um
+                número restrito de registros de transações (receitas/despesas), categorias e subcategorias, sem acesso
+                ao PIN de segurança, limitação a uma única moeda local, bem como restrições em outras funcionalidades
+                atuais ou futuras.</li>
+            <li><strong>Versão Premium (Acesso Vitalício/Lifetime):</strong> O usuário pode desbloquear certas
+                recursos e remover restrições por meio de um <strong>pagamento único vitalício</strong>. Não é uma
+                assinatura recorrente. A transação é processada com segurança pela Google Play Store e gerenciada pela
+                RevenueCat. Os reembolsos estão sujeitos às políticas padrão do Google Play.</li>
+        </ul>
+
+        <h2>3. Privacidade e Gerenciamento de Dados (Abordagem Local)</h2>
+        <p>Dada a natureza técnica do App, o gerenciamento de dados é estritamente local. Todos os dados financeiros
+            inseridos são armazenados exclusivamente na memória do dispositivo do usuário. O FlowBalance não tem acesso,
+            não coleta e não armazena seus dados financeiros em servidores externos.</p>
+        <ul>
+            <li><strong>Backups e Exportação:</strong> O usuário é o único responsável por fazer o backup de seus dados
+                usando o recurso de exportação manual de JSON.</li>
+            <li><strong>Exclusão de Dados:</strong> Ao desinstalar o App ou limpar seus dados de cache, todas as
+                informações financeiras serão excluídas irreversivelmente, a menos que o usuário tenha salvo um backup
+                externo manualmente.</li>
+        </ul>
+
+        <h2>4. Segurança e PIN de Acesso</h2>
+        <p>O App oferece um recurso opcional de PIN de segurança de 4 dígitos. O usuário é o único responsável por
+            lembrar e proteger esse código.</p>
+        <div class="warning-box">
+            <strong>Aviso:</strong> Como não há contas vinculadas a um e-mail, não há processo de recuperação de PIN. Se
+            o usuário esquecer seu PIN, poderá perder o acesso aos seus dados locais sem possibilidade de recuperação
+            pelo desenvolvedor.
+        </div>
+
+        <h2>5. Isenção de Responsabilidade (Sem Consultoria Financeira)</h2>
+        <p>O App fornece cálculos, gráficos e saldos baseados exclusivamente nas informações inseridas pelo usuário. O
+            conteúdo gerado pelo App não constitui aconselhamento financeiro, legal, contábil ou tributário
+            profissional. O usuário é o único responsável pelas decisões financeiras que toma. O Undefined Flow Lab não
+            se responsabiliza por perdas financeiras, investimentos malsucedidos ou erros de fluxo de caixa decorrentes
+            do uso da ferramenta.</p>
+
+        <h2>6. Propriedade Intelectual</h2>
+        <p>Todo o código-fonte, designs, logotipos, gráficos e textos do App são propriedade exclusiva do Undefined Flow
+            Lab. A engenharia reversa, descompilação ou distribuição não autorizada são estritamente proibidas.</p>
+
+        <h2>7. Limitação de Responsabilidade</h2>
+        <p>Na extensão máxima permitida por lei, o desenvolvedor não será responsável por perda de dados devido a falha
+            do dispositivo, roubo ou falta de backups; erros técnicos ou interrupções de serviço; ou o uso do arquivo
+            JSON exportado fora do aplicativo.</p>
+
+        <h2>8. Lei Aplicável e Jurisdição</h2>
+        <p>Estes termos são regidos pelas leis da República da Colômbia. Qualquer disputa será submetida aos tribunais
+            competentes na Colômbia, sem prejuízo dos direitos imperativos de proteção ao consumidor aplicáveis
+            localmente no país de residência do usuário.</p>
+    </div>
+
+    <div id="English-footer" class="footer tab-content active">
+        <p>Contact: <strong>undefinedflow.lab@gmail.com</strong></p>
+        <p>&copy; 2026 Undefined Flow Lab. All rights reserved.</p>
+    </div>
+
+    <div id="Espanol-footer" class="footer tab-content">
+        <p>Contacto: <strong>undefinedflow.lab@gmail.com</strong></p>
+        <p>&copy; 2026 Undefined Flow Lab. Todos los derechos reservados.</p>
+    </div>
+
+    <div id="Portugues-footer" class="footer tab-content">
+        <p>Contato: <strong>undefinedflow.lab@gmail.com</strong></p>
+        <p>&copy; 2026 Undefined Flow Lab. Todos os direitos reservados.</p>
+    </div>
+
+    <script>
+        function openTab(evt, langName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+                tabcontent[i].classList.remove("active");
+            }
+            tablinks = document.getElementsByClassName("tab-button");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].classList.remove("active");
+            }
+            document.getElementById(langName).style.display = "block";
+            document.getElementById(langName + "-footer").style.display = "block";
+            evt.currentTarget.classList.add("active");
+        }
+    </script>
+
+</body>
+
+</html>
