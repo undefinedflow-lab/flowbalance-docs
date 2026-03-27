@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Política de Privacidad - FlowBalance</title>
+    <title>Privacy Policy - FlowBalance</title>
     <style>
         body { 
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; 
@@ -13,72 +13,83 @@
             margin: 40px auto; 
             padding: 0 20px; 
         }
-        h1 { color: #111; border-bottom: 2px solid #eee; padding-bottom: 10px; }
-        h2 { color: #222; margin-top: 35px; border-left: 4px solid #007bff; padding-left: 10px; }
-        h3 { color: #444; }
-        ul { margin-bottom: 20px; }
-        li { margin-bottom: 8px; }
-        .footer { 
-            margin-top: 50px; 
-            font-size: 0.9em; 
-            color: #666; 
-            border-top: 1px solid #eee; 
-            padding-top: 20px; 
-            text-align: center; 
+        
+        /* ESTILOS DE LAS PESTAÑAS */
+        .tab-container { margin-bottom: 30px; display: flex; justify-content: center; gap: 10px; border-bottom: 2px solid #eee; padding-bottom: 10px; }
+        .tab-button {
+            background: none; border: none; font-size: 16px; padding: 10px 20px; cursor: pointer; color: #666; font-weight: bold; border-radius: 5px 5px 0 0; transition: 0.3s;
         }
-        .highlight { background-color: #f8f9fa; padding: 15px; border-radius: 5px; border: 1px solid #e9ecef; }
+        .tab-button:hover { background-color: #f8f9fa; color: #007bff; }
+        .tab-button.active { color: #007bff; border-bottom: 3px solid #007bff; }
+        
+        /* ESTILOS DEL CONTENIDO */
+        .tab-content { display: none; animation: fadeEffect 0.5s; }
+        .tab-content.active { display: block; }
+        
+        /* Animación suave al cambiar de pestaña */
+        @keyframes fadeEffect { from {opacity: 0;} to {opacity: 1;} }
+
+        h1 { color: #111; margin-top: 20px; }
+        h2 { color: #222; margin-top: 35px; border-left: 4px solid #007bff; padding-left: 10px; }
+        .footer { margin-top: 50px; font-size: 0.9em; color: #666; border-top: 1px solid #eee; padding-top: 20px; text-align: center; }
     </style>
 </head>
-<nav style="background: #f8f9fa; padding: 15px; border-bottom: 1px solid #ddd; text-align: center;">
-    <a href="index.html" style="margin-right: 20px; font-weight: bold; text-decoration: none; color: #007bff;">Privacy Policy</a>
-    <a href="terms.html" style="text-decoration: none; color: #555;">Terms & Conditions</a>
-</nav>
 <body>
 
-    <h1>Política de Privacidad y Tratamiento de Datos</h1>
-    <p><strong>Fecha de entrada en vigor:</strong> 27 de marzo de 2026<br>
-    <strong>Responsable del Tratamiento:</strong> Undefined Flow Lab</p>
-
-    <div class="highlight">
-        <p>En FlowBalance, la privacidad es el núcleo de nuestra herramienta. Al ser una aplicación de gestión local, nuestro principio fundamental es: <strong>tus datos financieros te pertenecen solo a ti</strong>.</p>
+    <div class="tab-container">
+        <button class="tab-button active" onclick="openTab(event, 'English')">🇬🇧 English</button>
+        <button class="tab-button" onclick="openTab(event, 'Espanol')">🇪🇸 Español</button>
+        <button class="tab-button" onclick="openTab(event, 'Portugues')">🇧🇷 Português</button>
     </div>
 
-    <h2>1. Naturaleza de la Aplicación (Almacenamiento Local)</h2>
-    <p>Dada la naturaleza técnica de la App, FlowBalance funciona de manera local (offline). Tus <strong>datos financieros (ingresos, gastos, categorías y configuraciones)</strong> son ingresados manualmente por ti. FlowBalance NO recolecta, NO almacena en sus servidores, ni tiene acceso a estos registros. Se guardan exclusivamente en el almacenamiento privado de tu dispositivo.</p>
+    <div id="English" class="tab-content active">
+        <h1>Privacy Policy</h1>
+        <p><strong>Last Updated:</strong> March 27, 2026</p>
+        <p>At FlowBalance, privacy is at the core of our tool. As a local-storage app, our fundamental principle is: <strong>your financial data belongs only to you.</strong></p>
+        <p><em>... [Rest of English Policy] ...</em></p>
+    </div>
 
-    <h2>2. Información que Recopilamos y Por Qué</h2>
-    <p>Para cumplir con los requisitos de funcionamiento y licenciamiento de la Google Play Store, procesamos estrictamente los siguientes datos:</p>
-    <ul>
-        <li><strong>Historial de Compras y Datos de Suscripción:</strong> Si realizas la compra del acceso vitalicio (Premium/Lifetime) para desbloquear funciones ilimitadas, la transacción es procesada íntegramente por Google Play Store y gestionada por RevenueCat. Nosotros no almacenamos los datos de tu tarjeta de crédito.</li>
-        <li><strong>Identificadores del Dispositivo:</strong> Utilizamos identificadores técnicos (IDs anónimos del dispositivo) compartidos con RevenueCat exclusivamente para validar tu compra, prevenir fraudes y permitir la restauración de tu acceso Premium si cambias de teléfono.</li>
-        <li><strong>Correo Electrónico:</strong> Solo recopilamos tu dirección de correo electrónico si decides contactarnos de forma voluntaria a través de la sección de "Sugerencias" o soporte técnico dentro de la app. Este dato se usa únicamente para atender tus solicitudes en caso de fallos.</li>
-    </ul>
+    <div id="Espanol" class="tab-content">
+        <h1>Política de Privacidad</h1>
+        <p><strong>Fecha de actualización:</strong> 27 de marzo de 2026</p>
+        <p>En FlowBalance, la privacidad es el núcleo de nuestra herramienta. Al ser una aplicación de gestión local, nuestro principio fundamental es: <strong>tus datos financieros te pertenecen solo a ti.</strong></p>
+        <p><em>... [Resto de la política en Español] ...</em></p>
+    </div>
 
-    <h2>3. Proveedores de Servicios (Terceros)</h2>
-    <p>Para la gestión de pagos y licencias, utilizamos los servicios de <strong>RevenueCat</strong>. Al realizar una compra en FlowBalance, los identificadores de tu dispositivo y el recibo de compra digital se comparten con RevenueCat para validar la transacción. Te recomendamos revisar la política de privacidad de RevenueCat en su sitio web oficial.</p>
-
-    <h2>4. Derechos de los Usuarios (Habeas Data)</h2>
-    <p>De acuerdo con la Ley 1581 de 2012 de Colombia, como titular de los datos tienes derecho a:</p>
-    <ul>
-        <li><strong>Conocer, actualizar y rectificar tus datos:</strong> Esto lo haces directamente editando tus registros en la App.</li>
-        <li><strong>Solicitar la supresión de la información:</strong> Puedes borrar todos tus registros financieros y configuraciones eliminando los datos (borrar almacenamiento/caché) desde los ajustes de tu dispositivo Android, o desinstalando la App.</li>
-    </ul>
-    <p>El ejercicio de estos derechos se realiza principalmente de forma autónoma por el usuario dentro de la interfaz y los ajustes del sistema. Para solicitar la eliminación de correos enviados a soporte, puedes escribirnos directamente a nuestro email de contacto.</p>
-
-    <h2>5. Seguridad de la Información y Backups</h2>
-    <p>Aunque los datos están en tu dispositivo, implementamos medidas para ayudarte a protegerlos:</p>
-    <ul>
-        <li><strong>PIN de Seguridad:</strong> Ofrecemos una capa de protección mediante un PIN de 4 dígitos para evitar accesos no autorizados de terceros que tomen tu teléfono.</li>
-        <li><strong>Copias de Seguridad (Exportación JSON):</strong> La aplicación permite exportar e importar un archivo JSON con tus datos. Los archivos exportados en formato JSON son responsabilidad del usuario; recomendamos no compartirlos en canales no seguros ni almacenarlos en nubes públicas sin precaución.</li>
-    </ul>
-
-    <h2>6. Cambios en la Política</h2>
-    <p>Podemos actualizar esta política ocasionalmente para reflejar cambios legales o la integración de nuevas funciones (como futuras herramientas de analíticas). Te notificaremos cualquier cambio importante mediante un aviso dentro de la App.</p>
+    <div id="Portugues" class="tab-content">
+        <h1>Política de Privacidade</h1>
+        <p><strong>Última atualização:</strong> 27 de março de 2026</p>
+        <p>No FlowBalance, a privacidade é o núcleo da nossa ferramenta. Sendo um aplicativo de gestão local, nosso princípio fundamental é: <strong>seus dados financeiros pertencem apenas a você.</strong></p>
+        <p><em>... [Resto da política em Português] ...</em></p>
+    </div>
 
     <div class="footer">
-        <p><strong>Contacto:</strong> Si tienes preguntas sobre esta política, escríbenos a <strong>undefinedflow.lab@gmail.com</strong>.</p>
+        <p>Contact / Contacto / Contato: [TU_CORREO_AQUÍ]</p>
         <p>&copy; 2026 Undefined Flow Lab. Todos los derechos reservados.</p>
     </div>
+
+    <script>
+        function openTab(evt, langName) {
+            var i, tabcontent, tablinks;
+            
+            // Oculta todos los contenidos
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+                tabcontent[i].classList.remove("active");
+            }
+            
+            // Quita la clase "active" de todos los botones
+            tablinks = document.getElementsByClassName("tab-button");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].classList.remove("active");
+            }
+            
+            // Muestra el contenido actual y añade la clase "active" al botón presionado
+            document.getElementById(langName).style.display = "block";
+            evt.currentTarget.classList.add("active");
+        }
+    </script>
 
 </body>
 </html>
