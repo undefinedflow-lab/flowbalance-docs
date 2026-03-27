@@ -167,7 +167,7 @@
         <p>Podemos atualizar esta política ocasionalmente para refletir mudanças legais ou a integração de novos recursos. Notificaremos você sobre quaisquer alterações importantes por meio de um aviso no aplicativo.</p>
     </div>
 
-    <div class="footer">
+    <div id="English-footer" class="footer tab-content">
         <p>Contact / Contacto / Contato: <strong>undefinedflow.lab@gmail.com</strong></p>
         <p>&copy; 2026 Undefined Flow Lab. Todos los derechos reservados.</p>
     </div>
@@ -185,6 +185,7 @@
                 tablinks[i].classList.remove("active");
             }
             document.getElementById(langName).style.display = "block";
+            document.getElementById(langName + "-footer").style.display = "block";
             evt.currentTarget.classList.add("active");
         }
     </script>
