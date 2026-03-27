@@ -15,7 +15,7 @@
         }
         
         /* ESTILOS DE LAS PESTAÑAS */
-        .tab-container { margin-bottom: 30px; display: flex; justify-content: center; gap: 10px; border-bottom: 2px solid #eee; padding-bottom: 10px; }
+        .tab-container { margin-bottom: 30px; display: flex; justify-content: center; gap: 10px; border-bottom: 2px solid #eee; padding-bottom: 10px; flex-wrap: wrap; }
         .tab-button {
             background: none; border: none; font-size: 16px; padding: 10px 20px; cursor: pointer; color: #666; font-weight: bold; border-radius: 5px 5px 0 0; transition: 0.3s;
         }
@@ -25,12 +25,11 @@
         /* ESTILOS DEL CONTENIDO */
         .tab-content { display: none; animation: fadeEffect 0.5s; }
         .tab-content.active { display: block; }
-        
-        /* Animación suave al cambiar de pestaña */
         @keyframes fadeEffect { from {opacity: 0;} to {opacity: 1;} }
 
-        h1 { color: #111; margin-top: 20px; }
+        h1 { color: #111; margin-top: 20px; border-bottom: 2px solid #eee; padding-bottom: 10px; }
         h2 { color: #222; margin-top: 35px; border-left: 4px solid #007bff; padding-left: 10px; }
+        .highlight { background-color: #f8f9fa; padding: 15px; border-radius: 5px; border: 1px solid #e9ecef; margin: 20px 0; }
         .footer { margin-top: 50px; font-size: 0.9em; color: #666; border-top: 1px solid #eee; padding-top: 20px; text-align: center; }
     </style>
 </head>
@@ -44,48 +43,147 @@
 
     <div id="English" class="tab-content active">
         <h1>Privacy Policy</h1>
-        <p><strong>Last Updated:</strong> March 27, 2026</p>
-        <p>At FlowBalance, privacy is at the core of our tool. As a local-storage app, our fundamental principle is: <strong>your financial data belongs only to you.</strong></p>
-        <p><em>... [Rest of English Policy] ...</em></p>
+        <p><strong>Effective Date:</strong> March 27, 2026<br>
+        <strong>Data Controller:</strong> Undefined Flow Lab</p>
+
+        <div class="highlight">
+            <p>At FlowBalance, privacy is at the core of our tool. As a local-storage management app, our fundamental principle is: <strong>your financial data belongs only to you.</strong></p>
+        </div>
+
+        <h2>1. Nature of the Application (Local Storage)</h2>
+        <p>Given the technical nature of the App, FlowBalance works locally (offline). Your <strong>financial data (income, expenses, categories, and settings)</strong> is entered manually by you. FlowBalance DOES NOT collect, DOES NOT store on its servers, nor does it have access to these records. They are saved exclusively in your device's private storage.</p>
+
+        <h2>2. Information We Collect and Why</h2>
+        <p>To comply with the operational and licensing requirements of the Google Play Store, we strictly process the following data:</p>
+        <ul>
+            <li><strong>Purchase History and Subscription Data:</strong> If you purchase the Lifetime access to unlock unlimited features, the transaction is processed entirely by the Google Play Store and managed by RevenueCat. We do not store your credit card information.</li>
+            <li><strong>Device Identifiers:</strong> We use technical identifiers (anonymous device IDs) shared with RevenueCat exclusively to validate your purchase, prevent fraud, and allow the restoration of your Premium access if you change devices.</li>
+            <li><strong>Email Address:</strong> We only collect your email address if you voluntarily decide to contact us through the support or "Suggestions" section within the app. This data is used solely to address your requests.</li>
+        </ul>
+
+        <h2>3. Service Providers (Third Parties)</h2>
+        <p>For payment and license management, we use the services of <strong>RevenueCat</strong>. When making a purchase in FlowBalance, your device identifiers and digital purchase receipt are shared with RevenueCat to validate the transaction. We recommend reviewing RevenueCat's privacy policy on their official website.</p>
+
+        <h2>4. User Rights</h2>
+        <p>In accordance with Law 1581 of 2012 of Colombia, as the owner of the data, you have the right to:</p>
+        <ul>
+            <li><strong>Know, update, and rectify your data:</strong> You do this directly by editing your records within the App.</li>
+            <li><strong>Request the deletion of information:</strong> You can delete all your financial records and settings by clearing the app data (clear storage/cache) from your Android device settings, or by uninstalling the App.</li>
+        </ul>
+        <p>The exercise of these rights is primarily done autonomously by the user within the interface. To request the deletion of emails sent to support, you can write directly to our contact email.</p>
+
+        <h2>5. Information Security and Backups</h2>
+        <p>Although the data is on your device, we implement measures to help you protect it:</p>
+        <ul>
+            <li><strong>Security PIN:</strong> We offer a protection layer through a 4-digit PIN to prevent unauthorized access by third parties who may take your phone.</li>
+            <li><strong>Backups (JSON Export):</strong> The application allows you to export and import a JSON file containing your data. Exported files in JSON format are the user's responsibility; we recommend not sharing them on unsecured channels.</li>
+        </ul>
+
+        <h2>6. Changes to the Policy</h2>
+        <p>We may update this policy occasionally to reflect legal changes or the integration of new features. We will notify you of any major changes via a notice within the App.</p>
     </div>
 
     <div id="Espanol" class="tab-content">
-        <h1>Política de Privacidad</h1>
-        <p><strong>Fecha de actualización:</strong> 27 de marzo de 2026</p>
-        <p>En FlowBalance, la privacidad es el núcleo de nuestra herramienta. Al ser una aplicación de gestión local, nuestro principio fundamental es: <strong>tus datos financieros te pertenecen solo a ti.</strong></p>
-        <p><em>... [Resto de la política en Español] ...</em></p>
+        <h1>Política de Privacidad y Tratamiento de Datos</h1>
+        <p><strong>Fecha de entrada en vigor:</strong> 27 de marzo de 2026<br>
+        <strong>Responsable del Tratamiento:</strong> Undefined Flow Lab</p>
+
+        <div class="highlight">
+            <p>En FlowBalance, la privacidad es el núcleo de nuestra herramienta. Al ser una aplicación de gestión local, nuestro principio fundamental es: <strong>tus datos financieros te pertenecen solo a ti.</strong></p>
+        </div>
+
+        <h2>1. Naturaleza de la Aplicación (Almacenamiento Local)</h2>
+        <p>Dada la naturaleza técnica de la App, FlowBalance funciona de manera local (offline). Tus <strong>datos financieros (ingresos, gastos, categorías y configuraciones)</strong> son ingresados manualmente por ti. FlowBalance NO recolecta, NO almacena en sus servidores, ni tiene acceso a estos registros. Se guardan exclusivamente en el almacenamiento privado de tu dispositivo.</p>
+
+        <h2>2. Información que Recopilamos y Por Qué</h2>
+        <p>Para cumplir con los requisitos de funcionamiento y licenciamiento de la Google Play Store, procesamos estrictamente los siguientes datos:</p>
+        <ul>
+            <li><strong>Historial de Compras y Datos de Suscripción:</strong> Si realizas la compra del acceso vitalicio (Lifetime) para desbloquear funciones ilimitadas, la transacción es procesada íntegramente por Google Play Store y gestionada por RevenueCat. Nosotros no almacenamos los datos de tu tarjeta de crédito.</li>
+            <li><strong>Identificadores del Dispositivo:</strong> Utilizamos identificadores técnicos (IDs anónimos del dispositivo) compartidos con RevenueCat exclusivamente para validar tu compra, prevenir fraudes y permitir la restauración de tu acceso Premium si cambias de teléfono.</li>
+            <li><strong>Correo Electrónico:</strong> Solo recopilamos tu dirección de correo electrónico si decides contactarnos de forma voluntaria a través de la sección de "Sugerencias" o soporte técnico dentro de la app.</li>
+        </ul>
+
+        <h2>3. Proveedores de Servicios (Terceros)</h2>
+        <p>Para la gestión de pagos y licencias, utilizamos los servicios de <strong>RevenueCat</strong>. Al realizar una compra en FlowBalance, los identificadores de tu dispositivo y el recibo de compra digital se comparten con RevenueCat para validar la transacción. Te recomendamos revisar la política de privacidad de RevenueCat en su sitio web oficial.</p>
+
+        <h2>4. Derechos de los Usuarios (Habeas Data)</h2>
+        <p>De acuerdo con la Ley 1581 de 2012 de Colombia, como titular de los datos tienes derecho a:</p>
+        <ul>
+            <li><strong>Conocer, actualizar y rectificar tus datos:</strong> Esto lo haces directamente editando tus registros en la App.</li>
+            <li><strong>Solicitar la supresión de la información:</strong> Puedes borrar todos tus registros financieros eliminando los datos (borrar almacenamiento/caché) desde los ajustes de tu dispositivo Android, o desinstalando la App.</li>
+        </ul>
+        <p>El ejercicio de estos derechos se realiza principalmente de forma autónoma por el usuario. Para solicitar la eliminación de correos enviados a soporte, puedes escribirnos directamente a nuestro email de contacto.</p>
+
+        <h2>5. Seguridad de la Información y Backups</h2>
+        <p>Aunque los datos están en tu dispositivo, implementamos medidas para ayudarte a protegerlos:</p>
+        <ul>
+            <li><strong>PIN de Seguridad:</strong> Ofrecemos una capa de protección mediante un PIN de 4 dígitos para evitar accesos no autorizados.</li>
+            <li><strong>Copias de Seguridad (Exportación JSON):</strong> La aplicación permite exportar e importar un archivo JSON con tus datos. Los archivos exportados son responsabilidad del usuario; recomendamos no compartirlos en canales no seguros.</li>
+        </ul>
+
+        <h2>6. Cambios en la Política</h2>
+        <p>Podemos actualizar esta política ocasionalmente para reflejar cambios legales o la integración de nuevas funciones. Te notificaremos cualquier cambio importante mediante un aviso dentro de la App.</p>
     </div>
 
     <div id="Portugues" class="tab-content">
-        <h1>Política de Privacidade</h1>
-        <p><strong>Última atualização:</strong> 27 de março de 2026</p>
-        <p>No FlowBalance, a privacidade é o núcleo da nossa ferramenta. Sendo um aplicativo de gestão local, nosso princípio fundamental é: <strong>seus dados financeiros pertencem apenas a você.</strong></p>
-        <p><em>... [Resto da política em Português] ...</em></p>
+        <h1>Política de Privacidade e Tratamento de Dados</h1>
+        <p><strong>Data de vigência:</strong> 27 de março de 2026<br>
+        <strong>Controlador de Dados:</strong> Undefined Flow Lab</p>
+
+        <div class="highlight">
+            <p>No FlowBalance, a privacidade é o núcleo da nossa ferramenta. Sendo um aplicativo de gestão local, nosso princípio fundamental é: <strong>seus dados financeiros pertencem apenas a você.</strong></p>
+        </div>
+
+        <h2>1. Natureza do Aplicativo (Armazenamento Local)</h2>
+        <p>Devido à natureza técnica do aplicativo, o FlowBalance funciona localmente (offline). Seus <strong>dados financeiros (receitas, despesas, categorias e configurações)</strong> são inseridos manualmente por você. O FlowBalance NÃO coleta, NÃO armazena em seus servidores, nem tem acesso a esses registros. Eles são salvos exclusivamente no armazenamento privado do seu dispositivo.</p>
+
+        <h2>2. Informações que Coletamos e o Motivo</h2>
+        <p>Para cumprir os requisitos de funcionamento e licenciamento da Google Play Store, processamos estritamente os seguintes dados:</p>
+        <ul>
+            <li><strong>Histórico de Compras e Dados de Assinatura:</strong> Se você comprar o acesso vitalício (Lifetime) para desbloquear recursos ilimitados, a transação será totalmente processada pela Google Play Store e gerenciada pela RevenueCat. Nós não armazenamos as informações do seu cartão de crédito.</li>
+            <li><strong>Identificadores de Dispositivo:</strong> Usamos identificadores técnicos (IDs de dispositivo anônimos) compartilhados com a RevenueCat exclusivamente para validar sua compra, evitar fraudes e permitir a restauração do seu acesso Premium se você trocar de telefone.</li>
+            <li><strong>Endereço de E-mail:</strong> Só coletamos seu endereço de e-mail se você decidir nos contatar voluntariamente por meio da seção de suporte ou "Sugestões" no aplicativo. Esses dados são usados exclusivamente para atender às suas solicitações.</li>
+        </ul>
+
+        <h2>3. Provedores de Serviços (Terceiros)</h2>
+        <p>Para gerenciamento de pagamentos e licenças, usamos os serviços da <strong>RevenueCat</strong>. Ao fazer uma compra no FlowBalance, os identificadores do seu dispositivo e o recibo de compra digital são compartilhados com a RevenueCat para validar a transação. Recomendamos revisar a política de privacidade da RevenueCat em seu site oficial.</p>
+
+        <h2>4. Direitos do Usuário</h2>
+        <p>De acordo com a Lei 1581 de 2012 da Colômbia, como titular dos dados, você tem o direito de:</p>
+        <ul>
+            <li><strong>Conhecer, atualizar e retificar seus dados:</strong> Você faz isso diretamente editando seus registros no aplicativo.</li>
+            <li><strong>Solicitar a exclusão de informações:</strong> Você pode excluir todos os seus registros financeiros e configurações limpando os dados do aplicativo (limpar armazenamento/cache) nas configurações do seu dispositivo Android ou desinstalando o aplicativo.</li>
+        </ul>
+        <p>O exercício desses direitos é feito principalmente de forma autônoma pelo usuário na interface. Para solicitar a exclusão de e-mails enviados ao suporte, você pode escrever diretamente para o nosso e-mail de contato.</p>
+
+        <h2>5. Segurança da Informação e Backups</h2>
+        <p>Embora os dados estejam no seu dispositivo, implementamos medidas para ajudá-lo a protegê-los:</p>
+        <ul>
+            <li><strong>PIN de Segurança:</strong> Oferecemos uma camada de proteção por meio de um PIN de 4 dígitos para impedir o acesso não autorizado.</li>
+            <li><strong>Backups (Exportação JSON):</strong> O aplicativo permite exportar e importar um arquivo JSON com seus dados. Os arquivos exportados em formato JSON são de responsabilidade do usuário; recomendamos não compartilhá-los em canais não seguros.</li>
+        </ul>
+
+        <h2>6. Alterações na Política</h2>
+        <p>Podemos atualizar esta política ocasionalmente para refletir mudanças legais ou a integração de novos recursos. Notificaremos você sobre quaisquer alterações importantes por meio de um aviso no aplicativo.</p>
     </div>
 
     <div class="footer">
-        <p>Contact / Contacto / Contato: [TU_CORREO_AQUÍ]</p>
+        <p>Contact / Contacto / Contato: <strong>undefinedflow.lab@gmail.com</strong></p>
         <p>&copy; 2026 Undefined Flow Lab. Todos los derechos reservados.</p>
     </div>
 
     <script>
         function openTab(evt, langName) {
             var i, tabcontent, tablinks;
-            
-            // Oculta todos los contenidos
             tabcontent = document.getElementsByClassName("tab-content");
             for (i = 0; i < tabcontent.length; i++) {
                 tabcontent[i].style.display = "none";
                 tabcontent[i].classList.remove("active");
             }
-            
-            // Quita la clase "active" de todos los botones
             tablinks = document.getElementsByClassName("tab-button");
             for (i = 0; i < tablinks.length; i++) {
                 tablinks[i].classList.remove("active");
             }
-            
-            // Muestra el contenido actual y añade la clase "active" al botón presionado
             document.getElementById(langName).style.display = "block";
             evt.currentTarget.classList.add("active");
         }
